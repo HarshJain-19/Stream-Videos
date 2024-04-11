@@ -1,0 +1,21 @@
+{
+  "name": "sv-backend",
+  "version": "1.0.0",
+  "description": "a backend for a project named 'Stream-Videos' similar to youtube",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "node",
+    "express",
+    "backend",
+    "chai"
+  ],
+  "author": "Harsh Jain",
+  "license": "ISC",
+  "dependencies": {
+    "node": "^18.20.2"
+  }
+}
