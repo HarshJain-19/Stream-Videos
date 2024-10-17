@@ -4,7 +4,7 @@ A simple project for video streaming platform similar to youtube
 
 ## Refer 
 
-** Chai Aur Code **
+*** Chai Aur Code ***
 
 ## Links
 
