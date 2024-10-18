@@ -18,6 +18,10 @@ export const userSchema = new Schema({
     lowercase: true,
     trim: true,
   },
+  password: {
+    type: String,
+    required: [true, "password is required"],
+  },
   fullName: {
     type: String,
     required: true,
@@ -37,10 +41,6 @@ export const userSchema = new Schema({
       ref: "Video",
     }
   ],
-  password: {
-    type: String,
-    required: [true, "password is required"],
-  },
   refreshToken: {
     type: String,
   },
@@ -54,7 +54,7 @@ export const userSchema = new Schema({
 
 userSchema.pre("save", async function (next) {
   if (this.isModified("password")) 
-    this.password = bcrypt(this.password, process.env.HASH_ROUNDS || 9);
+    this.password = await bcrypt(this.password, process.env.HASH_ROUNDS || 9);
   next();
 });
 

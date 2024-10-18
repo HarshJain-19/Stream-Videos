@@ -16,7 +16,7 @@ app.use(express.static("public"));  //~ to store files, pdf and more in public f
 app.use(cookieParser());    //~ parsing cookie with securely
 
 //* import routers 
-import userRouter from "./routes/user.route.js";
+import userRouter from "./routes/user.routes.js";
 
 app.all("/", (req, res) => {
   res.send("Namaste EveryOne!");
